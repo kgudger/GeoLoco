@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+<head>
+    <title>GeoLoco</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!-- This is a blank template, include any desired javascript frameworks, libraries, CSS here and start developing the app  -->
+
+    <!-- IMPORTANT: Do not include your weinre script tag as part of your release builds! -->
+    <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work below -->
+    <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+
+    <script src="intelxdk.js"></script>         <!-- phantom library, needed for Intel XDK api calls -->
+    <script src="cordova.js"></script>          <!-- phantom library, needed for Cordova api calls -->
+    <script src="xhr.js"></script>              <!-- phantom library, needed for Intel XDK CORS -->
+
+    <script src="js/app.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <!-- Add your HTML here -->
+	<h1>Tell Me Where You Are!</h1>
+	<div id="mainid">
+		Latitude<br>
+		<input type="text" id="lat" name="latitude"/><br>
+		Longitude<br>
+		<input type="text" id="lon"/><br>
+		Place Name<br>
+		<input type="text" id="pname"/><br>
+		Select a Category<br>
+		<select name="category" id="catselect">
+			<option value="Undefined">Undefined</option>
+			<option value="Home">Home</option>
+			<option value="Grocery">Grocery</option>
+			<option value="Hardware">Hardware</option>
+			<option value="Volunteer">Volunteer</option>
+			<option value="Restaurant">Restaurant</option>
+			<option value="CoffeeShop">Coffee Shop</option>
+			<option value="Meeting">Meeting</option>
+			<option value="WorkShop">Work Shop</option>
+			<option value="Event">Event</option>
+		</select><br>
+		Hours:<br>
+		<input type="text" id="hlength"/><br>
+		Details:<br>
+		<input type="text" id="fname"/><br>
+		<input class="buttonleft orangeButton" type="button" name="Enter" value="Enter" onclick="enterformFn()">
+		<div id="datetime"></div>
+		<div id="rstatus">Status.</div>
+	</div> <!-- mainid -->
+</body>
+</html>
